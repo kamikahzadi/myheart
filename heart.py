@@ -12,7 +12,7 @@ st.write("""
 This app predicts the **HeartDisease** !
 """)
 
-data = st.file_uploader('dataset' , type=[csv])
+data = st.file_uploader('first upload the dataset' , type=['csv'])
 df =pd.read_csv(data)
 df['Sex'] = df['Sex'].map({'M':1 , 'F':0})
 df['ChestPainType'] = df['ChestPainType'].map({'ATA':1, 'NAP':2, 'ASY':3, 'TA':0})
