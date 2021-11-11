@@ -13,7 +13,7 @@ This app predicts the **HeartDisease** !
 """)
 
 dataset = st.file_uploader('dataset', type=['csv'])
-df = pd.read_csv(df)
+df = pd.read_csv(dataset)
 df['Sex'] = df['Sex'].map({'M':1 , 'F':0})
 df['ChestPainType'] = df['ChestPainType'].map({'ATA':1, 'NAP':2, 'ASY':3, 'TA':0})
 df['RestingECG'] = df['RestingECG'].map({'Normal':1, 'ST':0, 'LVH':2})
