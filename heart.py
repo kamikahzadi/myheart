@@ -13,7 +13,7 @@ st.write("""
 This app predicts the **HeartDisease** !
 """)
 
-df = path(__file__).parents[1] / 'C:\Users\kahza\Desktop\heart\heart.csv'
+df = path(__file__).parents[1] / 'data\heart.csv'
 df['Sex'] = df['Sex'].map({'M':1 , 'F':0})
 df['ChestPainType'] = df['ChestPainType'].map({'ATA':1, 'NAP':2, 'ASY':3, 'TA':0})
 df['RestingECG'] = df['RestingECG'].map({'Normal':1, 'ST':0, 'LVH':2})
