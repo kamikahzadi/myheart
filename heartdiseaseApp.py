@@ -75,5 +75,5 @@ if st.button('Do I have HeartDisease?') == True:
     if prediction == 0:
         st.success('congraduation!*This App deny it')
         st.balloons()
-    if prediction == 1 :
-        st.failure('Im afraid maybe you should see your doctor')
+    else :
+        st.warning('Im afraid maybe you should see your doctor')
