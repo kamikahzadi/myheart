@@ -69,6 +69,9 @@ st.write('the accuracy of prediction is {:.2f} %'.format(accuracy))
 
 
 #
-if st.button('anything else?') == True:
-     st.success('nothing you just got it')
-     st.balloons()
+if st.button('Do I have HeartDisease?') == True:
+    if prediction == 0:
+        st.success('congraduation!*This App deny it')
+        st.balloons()
+    else :
+        st.failure('Im afraid maybe you should see your doctor')
