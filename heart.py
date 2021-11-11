@@ -7,13 +7,13 @@ from sklearn.ensemble import RandomForestClassifier
 from sklearn.preprocessing import StandardScaler
 from sklearn.model_selection import train_test_split
 from sklearn.metrics import accuracy_score , confusion_matrix
-from pathlib import path
 st.write("""
 # Simple Heart Disease Prediction App
 This app predicts the **HeartDisease** !
 """)
 
-df = path(__file__).parents[1] / 'data\heart.csv'
+dataset = st.file_uploader('dataset', type=['csv'])
+df = pd.read_csv(df)
 df['Sex'] = df['Sex'].map({'M':1 , 'F':0})
 df['ChestPainType'] = df['ChestPainType'].map({'ATA':1, 'NAP':2, 'ASY':3, 'TA':0})
 df['RestingECG'] = df['RestingECG'].map({'Normal':1, 'ST':0, 'LVH':2})
